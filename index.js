@@ -6,6 +6,9 @@ const cors = require('cors')
 const cocktailRoutes = require("./routes/cocktailRoutes");
 const authRoutes = require("./routes/authRoutes");
 
+const cocktailRoutes = require("./routes/cocktailroutes");
+const authRoutes = require("./routes/authroutes");
+
 const passport = require("./config/passport");
 
 const app = express();

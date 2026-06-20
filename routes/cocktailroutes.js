@@ -15,7 +15,7 @@ const {
 
 
 router.post('/add/cocktails', passport.authenticate("jwt", { session: false }),upload.single("image"), addCocktail)
-router.get('/get/cocktails',getAllCocktails)
+router.get('/get/cocktails',passport.authenticate("jwt", { session: false }),getAllCocktails)
 router.get('/get/cocktails/:id',passport.authenticate("jwt", { session: false }),getCocktailById)
 router.put('/update/cocktails/:id',passport.authenticate("jwt", { session: false }),updateCocktail)
 router.delete('/delete/cocktails/:id',passport.authenticate("jwt", { session: false }),deleteCocktail)
